@@ -11,7 +11,7 @@ export default function Tasks() {
     const history = useHistory();
     const [lists, setLists] = useState([]);
     const [currentListIndex, setCurrentListIndex] = useState(0);
-    const { request, loading } = useHttp();
+    const { request } = useHttp();
     const { token } = useContext(AuthContext);
 
     const fetchLists = useCallback(async () => {
@@ -40,9 +40,9 @@ export default function Tasks() {
         fetchLists();
     }, [fetchLists]);
 
-    if(loading){
-        return <div>Loading</div>
-    }
+    // if(loading){
+    //     return <div>Loading</div>
+    // }
 
     return (
         <>
@@ -58,7 +58,8 @@ export default function Tasks() {
                             onDelete={ onDeleteList }
                         />
                     </div>
-                    <div className="col-4">
+                    <div className="col-2"></div>
+                    <div className="col-4 mt-2">
                     <Switch>
                         <Route path={`${path}/:listId`}>
                             <List />

@@ -4,13 +4,13 @@ import { useAuth } from '../hooks/auth.hook';
 import SignupPage from '../pages/SignupPage';
 import SigninPage from '../pages/SigninPage';
 import TasksPage from '../pages/TasksPage';
-// import { useRoutes } from '../hooks/router.hook';
+import MainLoader from './MainLoader/MainLoader';
 
 function App() {
   const { userId, token, login, logout, ready, isAuthenticated } = useAuth();
 
   if(!ready){
-    return <h1>Loading</h1>;
+    return <MainLoader />
   }
 
   let routes_;

@@ -5,6 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { useHttp } from '../hooks/http.hook';
 import { AuthContext } from '../context/AuthContext';
+import MainLoader from '../components/MainLoader/MainLoader';
 
 const schema = yup.object().shape({
     email: yup.string().email("Email should have correct format").required("Email is required"),
@@ -40,7 +41,7 @@ export default function SigninPage() {
     }
 
     if(loading){
-        return <h1>Loading</h1>
+        return <MainLoader />
     }
 
     return (

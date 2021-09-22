@@ -41,14 +41,14 @@ router.get('/', todos, async (req, res) => {
 //     }
 // });
 
-// router.delete('/:id', async (req, res) => {
-//     try {
-//         const todoList = await TodoList.findByIdAndDelete(req.params.id);
+router.delete('/:id', async (req, res) => {
+    try {
+        const todo = await Todo.findByIdAndDelete(req.params.id);
 
-//         res.json(todoList);
-//     } catch (error) {
-//         res.status(500).json({messege: "Something went wrong, try again"});
-//     }
-// })
+        res.json(todo);
+    } catch (error) {
+        res.status(500).json({messege: "Something went wrong, try again"});
+    }
+})
 
 module.exports = router;
