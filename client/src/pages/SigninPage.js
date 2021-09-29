@@ -6,6 +6,10 @@ import * as yup from "yup";
 import { useHttp } from '../hooks/http.hook';
 import { AuthContext } from '../context/AuthContext';
 import MainLoader from '../components/MainLoader/MainLoader';
+import Form from '../components/Form';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
+import '../css/forms.css';
 
 const schema = yup.object().shape({
     email: yup.string().email("Email should have correct format").required("Email is required"),
@@ -45,41 +49,32 @@ export default function SigninPage() {
     }
 
     return (
-        <div className="mx-auto mt-5" style={{maxWidth: '400px'}}>
-          <form onSubmit={handleSubmit(onSubmit)} noValidate>
-
-            <div className="text-center">
-                <h3>Sign in</h3>
+        <div className="mx-auto mt-5 custom-from">
+            <div className="form-title">
+                <h4>Sign in</h4>
             </div>
-
-            <div className="form-group mb-3">
-                <label>Email</label>
-                <input
+            <Form onSubmit={handleSubmit(onSubmit)}>
+                <FormInput 
                     name="email"
-                    type="text"
-                    {...register('email')}
-                    className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                    type="email"
+                    label="Email"
+                    register={ register }
+                    error={ errors.email }
                 />
-                <div className="invalid-feedback">{errors.email?.message}</div>
-            </div>
-    
-            <div className="form-group mb-4">
-                <label>Password</label>
-                <input
+
+                <FormInput 
                     name="password"
                     type="password"
-                    {...register('password')}
-                    className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                    label="Password"
+                    register={ register }
+                    error={ errors.password }
                 />
-                <div className="invalid-feedback">{errors.password?.message}</div>
-            </div>
 
-            <button type="submit" className="btn btn-primary form-control mb-4">Sign in</button>
-
-            <div className="text-center">
-                <p>Not a member? <NavLink to="/signup">Sign up</NavLink></p>
-            </div>
-          </form>
+                <FormButton type="submit">Sign in</FormButton>
+            </Form>
+            <p className="form-subtitle">
+                Not a member? <NavLink to="/signup">Sign up</NavLink>
+            </p>
         </div>
     );
 }

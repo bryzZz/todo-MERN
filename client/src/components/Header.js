@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
+import Theme from './Theme';
 
 export default function Header() {
     const { logout, isAuthenticated } = useContext(AuthContext);
@@ -24,6 +25,9 @@ export default function Header() {
                                 href="/"
                                 onClick={logout}
                             >Logout</a>
+                        </li>
+                        <li className="nav-item align-self-center" style={{marginLeft: '10px'}}>
+                            <Theme />
                         </li>
                     </ul>
                 }

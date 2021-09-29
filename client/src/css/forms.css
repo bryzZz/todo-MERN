@@ -1,0 +1,19 @@
+.custom-from{
+    max-width: 350px;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.form-title{
+    /* text-decoration:overline; */
+    text-align: center;
+    /* margin-left: 1em; */
+    margin-bottom: 0.6em;
+}
+
+.form-subtitle{
+    text-align: right;
+    color: var(--gray-color);
+    font-size: var(--small-font-size);
+    margin-top: 0.2em;
+}

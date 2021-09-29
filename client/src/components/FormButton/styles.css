@@ -1,0 +1,16 @@
+.FormButton{
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 0.4rem 0.6rem;
+    min-width: 270px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: var(--medium-font-size);
+    transition: all .2s;
+}
+
+.FormButton:hover{
+    background-color: var(--hover-primary-color);
+}

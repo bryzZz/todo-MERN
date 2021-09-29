@@ -1,0 +1,19 @@
+.theme{
+    background: var(--border);
+    outline: none;
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
+
+    transform: scale(1.5);
+}
+
+.theme:hover{
+    transform: scale(1.6);
+}

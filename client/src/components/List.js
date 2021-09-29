@@ -44,7 +44,7 @@ export default function List() {
                         <div
                             className="todoItem d-flex align-items-center justify-content-between border-bottom p-1"
                             key={ todo._id }>
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                             { todo.text }
                             <div className="buttons">
                                 <button className="btn btn-outline-warning btn-sm">
