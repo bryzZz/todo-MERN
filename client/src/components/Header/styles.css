@@ -1,0 +1,32 @@
+.Header{
+    padding: 0.5em 1em;
+    border-bottom: 1px solid var(--border-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: var(--big-font-size);
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.logo:hover{
+    color: var(--main-color);
+}
+
+.logout-btn{
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 0.3rem 0.7rem;
+    color: var(--in-primary-color);
+    transition: all .2s;
+}
+
+.logout-btn:hover{
+    background-color: var(--hover-primary-color);
+}

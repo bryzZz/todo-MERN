@@ -31,17 +31,31 @@ router.get('/', todos, async (req, res) => {
     }
 });
 
-// router.get('/:id', async (req, res) => {
-//     try {
-//         const todoList = await TodoList.findById(req.params.id);
+router.post('/star/:id', async (req, res) => {
+    try {
+        const todo = await Todo.findById(req.params.id);
+        todo.starred = !todo.starred;
+        await todo.save();
 
-//         res.json(todoList);
-//     } catch (error) {
-//         res.status(500).json({messege: "Something went wrong, try again"});
-//     }
-// });
+        res.json(todo);
+    } catch (error) {
+        res.status(500).json({messege: "Something went wrong, try again"});
+    }
+});
 
-router.delete('/:id', async (req, res) => {
+router.post('/complite/:id', async (req, res) => {
+    try {
+        const todo = await Todo.findById(req.params.id);
+        todo.complited = !todo.complited;
+        await todo.save();
+
+        res.json(todo);
+    } catch (error) {
+        res.status(500).json({messege: "Something went wrong, try again"});
+    }
+});
+
+router.delete('/delete/:id', async (req, res) => {
     try {
         const todo = await Todo.findByIdAndDelete(req.params.id);
 
@@ -49,6 +63,6 @@ router.delete('/:id', async (req, res) => {
     } catch (error) {
         res.status(500).json({messege: "Something went wrong, try again"});
     }
-})
+});
 
 module.exports = router;

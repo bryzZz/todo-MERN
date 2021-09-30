@@ -18,7 +18,7 @@
   left: 28px;
   border-radius: 50%;
   border: 16px solid #000;
-  border-color: var(--bs-primary) transparent var(--bs-primary) transparent;
+  border-color: var(--primary-color) transparent var(--primary-color) transparent;
   animation: ldio-cav05gp4zt 1s linear infinite;
 }
 .ldio-cav05gp4zt > div:nth-child(2) { border-color: transparent }
@@ -36,14 +36,14 @@
   height: 16px;
   top: -16px;
   left: 48px;
-  background: var(--bs-primary);
+  background: var(--primary-color);
   border-radius: 50%;
-  box-shadow: 0 128px 0 0 var(--bs-primary);
+  box-shadow: 0 128px 0 0 var(--primary-color);
 }
 .ldio-cav05gp4zt > div:nth-child(2) div:after { 
   left: -16px;
   top: 48px;
-  box-shadow: 128px 0 0 0 var(--bs-primary);
+  box-shadow: 128px 0 0 0 var(--primary-color);
 }
 .loadingio-spinner-dual-ring-8j5su10uwoc {
   width: 200px;

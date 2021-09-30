@@ -12,6 +12,7 @@
     height: 24px;
 
     transform: scale(1.5);
+    transition: all .1s;
 }
 
 .theme:hover{

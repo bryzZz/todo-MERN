@@ -8,7 +8,6 @@ import SignupPage from '../../pages/SignupPage';
 import SigninPage from '../../pages/SigninPage';
 import TasksPage from '../../pages/TasksPage';
 import MainLoader from '../MainLoader/MainLoader';
-import Theme from '../Theme';
 import './styles.css';
 
 function App() {
@@ -45,9 +44,10 @@ function App() {
     <AuthContext.Provider value={{userId, token, login, logout, isAuthenticated}}>
       <ThemeContext.Provider value={{theme, toggleTheme}} >
         <Router>
-          <div className={"App " + (isAuthenticated ? "authenticated" : "notauthenticated")}>
-            {/* { !isAuthenticated ? <Theme /> : null } */}
-            { routes_ }
+          <div className="App">
+            {/* <div className="container-xl"> */}
+              { routes_ }
+            {/* </div> */}
           </div>
         </Router>
       </ThemeContext.Provider>

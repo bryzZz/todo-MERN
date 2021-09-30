@@ -30,8 +30,6 @@
     font-size: var(--normal-font-size);
     transition: .3s;
 }
-
-/*Input focus move up label*/
 .form__input:focus + .form__label{
     top: -.5rem;
     left: .8rem;
@@ -40,8 +38,6 @@
     font-weight: 500;
     z-index: 10;
 }
-  
-/*Input focus sticky top label*/
 .form__input:not(:placeholder-shown).form__input:not(:focus)+ .form__label{
     top: -.5rem;
     left: .8rem;
@@ -49,17 +45,13 @@
     font-weight: 500;
     z-index: 10;
 }
-
-/*Input focus*/
 .form__input:focus{
     border: 1.5px solid var(--primary-color);
 }
-
 .form__div.is-invalid .form__input{
     border-color: var(--error-color);
     color: var(--error-color);
 }
-
 .form__div.is-invalid .form__label, .form__div.is-invalid + .invalid-feedback{
     color: var(--error-color);
 }

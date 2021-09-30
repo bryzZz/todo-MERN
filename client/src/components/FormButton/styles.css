@@ -6,7 +6,7 @@
     padding: 0.4rem 0.6rem;
     min-width: 270px;
     margin: 0 auto;
-    color: #FFFFFF;
+    color: var(--in-primary-color);
     font-size: var(--medium-font-size);
     transition: all .2s;
 }

@@ -1,0 +1,123 @@
+.todoList__input-container{
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todoList__input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--main-color);
+}
+.todoList__input::placeholder{
+    color: var(--gray-color);
+}
+.todoList__input-add{
+    max-width: 22px;
+    max-height: 22px;
+    width: 100%;
+    height: 100%;
+    stroke: var(--gray-color);
+    margin-right: 0.5em;
+    cursor: pointer;
+    transition: all .1s;
+}
+.todoList__input-add:hover{
+    stroke: var(--main-color);
+}
+
+.todoItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 0.5em;
+    padding: 0.2em 0;
+}
+
+.todoItem__text.complited{
+    text-decoration: line-through;
+}
+
+.todoItem__star{
+    max-width: 22px;
+    max-height: 22px;
+    width: 100%;
+    height: 100%;
+    stroke: var(--gray-color);
+    stroke-width: 2px;
+    fill: transparent;
+    cursor: pointer;
+    transition: all .1s;
+    margin-right: 0.3em;
+}
+
+.todoItem__star.active{
+    fill: var(--yellow-color);
+    stroke: var(--yellow-color);
+}
+
+.todoItem__star:hover{
+    stroke: var(--yellow-color);
+}
+
+.todoItem__delete{
+    max-width: 18px;
+    max-height: 18px;
+    width: 100%;
+    height: 100%;
+    stroke: var(--gray-color);
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.todoItem__delete:hover{
+    stroke: var(--error-color);
+}
+  
+.round {
+    position: relative;
+}
+
+.round label {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background-color: transparent;
+    border: 1px solid var(--gray-color);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+
+.round label:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    height: 6px;
+    width: 11px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    opacity: 0;
+    transform: rotate(-45deg);
+}
+
+.round input[type="checkbox"] {
+    visibility: hidden;
+    border: none;
+    outline: none;
+}
+
+.round input[type="checkbox"]:checked + label {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
